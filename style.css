@@ -1,0 +1,65 @@
+/* style.css */
+
+/* Base styles for body and typography */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Tailwind classes handle most of this, but keeping for clarity */
+}
+
+/* Container for consistent width and centering */
+.container {
+    max-width: 1200px; /* Adjust as needed for desired width */
+}
+
+/* Header Navigation Links */
+.nav-link {
+    @apply text-gray-600 hover:text-indigo-700 font-medium transition-colors;
+    padding: 8px 12px; /* Add some padding for better clickability */
+    border-radius: 6px; /* Slightly rounded corners */
+}
+
+/* Search Input Field */
+.search-input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all;
+}
+
+/* Article Card Styling */
+.article-card {
+    @apply bg-white rounded-xl shadow-md p-6 flex flex-col h-full transition-transform duration-200 ease-in-out;
+    &:hover {
+        transform: translateY(-5px);
+        @apply shadow-lg;
+    }
+}
+
+/* Read More Link in Article Cards */
+.read-more-link {
+    @apply text-indigo-600 hover:text-indigo-800 font-medium mt-auto inline-block transition-colors;
+}
+
+/* Sidebar Block Styling */
+.sidebar-block {
+    @apply bg-white rounded-xl shadow-md p-6;
+}
+
+/* Sidebar Links (Categories, Editor's Picks) */
+.sidebar-link {
+    @apply text-gray-700 hover:text-indigo-600 transition-colors;
+}
+
+/* Loading Spinner Animation */
+.loading-spinner {
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #4f46e5; /* Indigo */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: none; /* Hidden by default */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+

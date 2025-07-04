@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expvense - Insights & Innovations</title>
+    <!-- Tailwind CSS CDN for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter font for clean typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom styles for minimalist look -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-inter antialiased text-gray-800 bg-gray-50">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+            <!-- Logo/Site Name -->
+            <a href="#" class="text-3xl font-bold text-indigo-700 mb-4 md:mb-0 hover:text-indigo-800 transition-colors">Expvense</a>
+
+            <!-- Navigation and Search -->
+            <div class="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
+                <nav class="flex space-x-6">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Categories</a>
+                    <a href="#" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Contact</a>
+                </nav>
+                <div class="relative w-full md:w-64">
+                    <input type="text" id="headerSearchInput" placeholder="Search articles..." class="search-input pl-10">
+                    <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    <div id="headerLoadingSpinner" class="loading-spinner absolute right-3 top-1/2 -translate-y-1/2"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 my-8 flex flex-col lg:flex-row gap-8">
+        <!-- Articles Section -->
+        <section class="lg:w-3/4">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Recent Posts</h2>
+            <div id="mainNewsResults" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Placeholder for articles - these will be replaced by search results -->
+                <div class="article-card">
+                    <h3 class="text-xl font-semibold mb-2">The Rise of AI in Everyday Life</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">Artificial intelligence is no longer a futuristic concept; it's rapidly integrating into our daily routines, from smart assistants to personalized recommendations. Explore its impact.</p>
+                    <a href="#" class="read-more-link">Read More &rarr;</a>
+                </div>
+                <div class="article-card">
+                    <h3 class="text-xl font-semibold mb-2">Understanding Quantum Computing Basics</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">Dive into the fascinating world of quantum computing. This article demystifies the fundamental principles behind this revolutionary technology and its potential.</p>
+                    <a href="#" class="read-more-link">Read More &rarr;</a>
+                </div>
+                <div class="article-card">
+                    <h3 class="text-xl font-semibold mb-2">Data Science Trends for 2025</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">Stay ahead in the data science landscape. We cover the top trends, tools, and techniques expected to dominate the field in the coming year.</p>
+                    <a href="#" class="read-more-link">Read More &rarr;</a>
+                </div>
+                <div class="article-card">
+                    <h3 class="text-xl font-semibold mb-2">Building Sustainable Tech Solutions</h3>
+                    <p class="text-gray-600 mb-4 flex-grow">Discover how technology can be a force for good. This post explores innovative approaches to creating eco-friendly and sustainable tech products and practices.</p>
+                    <a href="#" class="read-more-link">Read More &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar Section -->
+        <aside class="lg:w-1/4">
+            <div class="sidebar-block">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Popular Categories</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="sidebar-link">Artificial Intelligence</a></li>
+                    <li><a href="#" class="sidebar-link">Machine Learning</a></li>
+                    <li><a href="#" class="sidebar-link">Web Development</a></li>
+                    <li><a href="#" class="sidebar-link">Hardware Hacking</a></li>
+                    <li><a href="#" class="sidebar-link">Open Source</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-block mt-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Editor's Picks</h3>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#" class="block text-gray-700 hover:text-indigo-600 transition-colors">
+                            <p class="font-medium">Deep Dive into Neural Networks</p>
+                            <p class="text-sm text-gray-500">An essential guide for beginners.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block text-gray-700 hover:text-indigo-600 transition-colors">
+                            <p class="font-medium">DIY Smart Home Automation</p>
+                            <p class="text-sm text-gray-500">Build your own intelligent home.</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-300 py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Expvense. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Use</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
+
